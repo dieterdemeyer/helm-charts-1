@@ -1,26 +1,5 @@
 apiVersion: v1
 entries:
-  alertmanager:
-  - apiVersion: v2
-    appVersion: v0.21.0
-    created: "2020-12-02T09:02:28.878020202Z"
-    description: The Alertmanager handles alerts sent by client applications such
-      as the Prometheus server.
-    digest: 09e1d2ea386172c6ec0ab8d687907c7301074f143157662b89b4e756ffb695b2
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    maintainers:
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: alertmanager
-    sources:
-    - https://github.com/prometheus/alertmanager
-    type: application
-    urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/alertmanager-0.2.0/alertmanager-0.2.0.tgz
-    version: 0.2.0
   kube-prometheus-stack:
   - annotations:
       artifacthub.io/links: |
@@ -30,8 +9,8 @@ entries:
           url: https://github.com/prometheus-operator/kube-prometheus
       artifacthub.io/operator: "true"
     apiVersion: v2
-    appVersion: 0.43.2
-    created: "2020-12-02T09:02:29.036698246Z"
+    appVersion: 0.44.0
+    created: "2020-12-04T07:33:11.013899133Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -49,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: ed9288a9f16f6efa807a97bb78f6b404632f454364ea51a892e423d27371e0a0
+    digest: c0ac51c2a365ae3ad640179d1b3e224ce19d90e2a1cc45b3ab06169ab82eced8
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -74,83 +53,51 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/kube-prometheus-stack-12.3.1/kube-prometheus-stack-12.3.1.tgz
-    version: 12.3.1
-  prometheus:
-  - apiVersion: v2
-    appVersion: 2.21.0
-    created: "2020-12-02T09:02:29.1738773Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://charts.helm.sh/stable/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 91fffd3fe64ae7de0be2d3404ebef2329bd42093192f531e5c123f21f5f01769
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
-    sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
-    type: application
-    urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-12.0.1/prometheus-12.0.1.tgz
-    version: 12.0.1
-  prometheus-postgres-exporter:
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/kube-prometheus-stack-12.5.0/kube-prometheus-stack-12.5.0.tgz
+    version: 12.5.0
+  prometheus-adapter:
   - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2020-12-02T09:02:29.310707751Z"
-    description: A Helm chart for prometheus postgres-exporter
-    digest: 26295a0729d940d617e8a28ce81e15d9736b09a655057ddc8c56550a295d7b91
-    home: https://github.com/wrouesnel/postgres_exporter
+    appVersion: v0.7.0
+    created: "2020-12-04T07:33:11.275994078Z"
+    description: A Helm chart for k8s prometheus adapter
+    digest: 3708713232333f0d96a1431d7794331ca8131674c8852396558a2626bbcf5e36
+    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
     keywords:
-    - postgresql
+    - hpa
+    - metrics
     - prometheus
-    - exporter
+    - adapter
     maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    name: prometheus-postgres-exporter
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
     sources:
-    - https://github.com/wrouesnel/postgres_exporter
+    - https://github.com/kubernetes/charts
+    - https://github.com/DirectXMan12/k8s-prometheus-adapter
     urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-postgres-exporter-1.5.0/prometheus-postgres-exporter-1.5.0.tgz
-    version: 1.5.0
-  prometheus-snmp-exporter:
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-adapter-2.8.0/prometheus-adapter-2.8.0.tgz
+    version: 2.8.0
+  prometheus-consul-exporter:
   - apiVersion: v1
-    appVersion: 0.19.0
-    created: "2020-12-02T09:02:29.433350482Z"
-    description: Prometheus SNMP Exporter
-    digest: 1ba8151255b3458246321cdd7236010ef02db7290108d5750bb2acdcd8313f6b
-    home: https://github.com/prometheus/snmp_exporter
+    appVersion: 0.4.0
+    created: "2020-12-04T07:33:11.770494509Z"
+    description: A Helm chart for the Prometheus Consul Exporter
+    digest: fc341d07e4e4ce328958ca9624ed7e66f81075457271d61e989ea407700b6e80
+    home: https://github.com/prometheus/consul_exporter
     keywords:
-    - prometheus
-    - snmp
+    - metrics
+    - consul
     - monitoring
     maintainers:
-    - email: maxime@root314.com
-      name: miouge1
-    name: prometheus-snmp-exporter
-    sources:
-    - https://github.com/prometheus/snmp_exporter
+    - email: 8890118+timm088@users.noreply.github.com
+      name: timm088
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: prometheus-consul-exporter
     urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-snmp-exporter-0.1.1/prometheus-snmp-exporter-0.1.1.tgz
-    version: 0.1.1
-generated: "2020-12-02T09:02:28.664337289Z"
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-consul-exporter-0.4.0/prometheus-consul-exporter-0.4.0.tgz
+    version: 0.4.0
+generated: "2020-12-04T07:33:10.531026907Z"
