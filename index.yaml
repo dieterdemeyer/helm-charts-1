@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.44.0
-    created: "2020-12-07T19:02:00.962556182Z"
+    created: "2020-12-07T19:11:18.791476719Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: 8a4010621c583b9a4bd420a6ed6c7d8031f78d2ea115eaf83fb217f5fbc59573
+    digest: 72a376e3651b312687965210b4b607fac4eb0d640d03a9f058787338df3bb8c0
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,66 +53,6 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/kube-prometheus-stack-12.6.0/kube-prometheus-stack-12.6.0.tgz
-    version: 12.6.0
-  prometheus:
-  - apiVersion: v2
-    appVersion: 2.21.0
-    created: "2020-12-07T19:02:01.140920026Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://charts.helm.sh/stable/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 8469c186107d8c5fbe793c9d0b90a1e56d62247b26e36528113a36c02e600917
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
-    sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
-    type: application
-    urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-12.0.2/prometheus-12.0.2.tgz
-    version: 12.0.2
-  prometheus-adapter:
-  - apiVersion: v1
-    appVersion: v0.7.0
-    created: "2020-12-07T19:02:01.297581429Z"
-    description: A Helm chart for k8s prometheus adapter
-    digest: 9bc413a36ba69e1f63642ed7996b7ef81687b4dc018aece80ccba686a020bb70
-    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
-    keywords:
-    - hpa
-    - metrics
-    - prometheus
-    - adapter
-    maintainers:
-    - email: mattias.gees@jetstack.io
-      name: mattiasgees
-    - name: steven-sheehy
-    - email: hfernandez@mesosphere.com
-      name: hectorj2f
-    name: prometheus-adapter
-    sources:
-    - https://github.com/kubernetes/charts
-    - https://github.com/DirectXMan12/k8s-prometheus-adapter
-    urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-adapter-2.8.1/prometheus-adapter-2.8.1.tgz
-    version: 2.8.1
-generated: "2020-12-07T19:02:00.802700352Z"
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/kube-prometheus-stack-12.7.0/kube-prometheus-stack-12.7.0.tgz
+    version: 12.7.0
+generated: "2020-12-07T19:11:18.538067666Z"
