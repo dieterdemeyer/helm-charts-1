@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.44.0
-    created: "2020-12-04T07:33:11.013899133Z"
+    created: "2020-12-07T19:02:00.962556182Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: c0ac51c2a365ae3ad640179d1b3e224ce19d90e2a1cc45b3ab06169ab82eced8
+    digest: 8a4010621c583b9a4bd420a6ed6c7d8031f78d2ea115eaf83fb217f5fbc59573
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,14 +53,49 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/kube-prometheus-stack-12.5.0/kube-prometheus-stack-12.5.0.tgz
-    version: 12.5.0
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/kube-prometheus-stack-12.6.0/kube-prometheus-stack-12.6.0.tgz
+    version: 12.6.0
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.21.0
+    created: "2020-12-07T19:02:01.140920026Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://charts.helm.sh/stable/
+      version: 2.8.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 8469c186107d8c5fbe793c9d0b90a1e56d62247b26e36528113a36c02e600917
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-12.0.2/prometheus-12.0.2.tgz
+    version: 12.0.2
   prometheus-adapter:
   - apiVersion: v1
     appVersion: v0.7.0
-    created: "2020-12-04T07:33:11.275994078Z"
+    created: "2020-12-07T19:02:01.297581429Z"
     description: A Helm chart for k8s prometheus adapter
-    digest: 3708713232333f0d96a1431d7794331ca8131674c8852396558a2626bbcf5e36
+    digest: 9bc413a36ba69e1f63642ed7996b7ef81687b4dc018aece80ccba686a020bb70
     home: https://github.com/DirectXMan12/k8s-prometheus-adapter
     keywords:
     - hpa
@@ -78,26 +113,6 @@ entries:
     - https://github.com/kubernetes/charts
     - https://github.com/DirectXMan12/k8s-prometheus-adapter
     urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-adapter-2.8.0/prometheus-adapter-2.8.0.tgz
-    version: 2.8.0
-  prometheus-consul-exporter:
-  - apiVersion: v1
-    appVersion: 0.4.0
-    created: "2020-12-04T07:33:11.770494509Z"
-    description: A Helm chart for the Prometheus Consul Exporter
-    digest: fc341d07e4e4ce328958ca9624ed7e66f81075457271d61e989ea407700b6e80
-    home: https://github.com/prometheus/consul_exporter
-    keywords:
-    - metrics
-    - consul
-    - monitoring
-    maintainers:
-    - email: 8890118+timm088@users.noreply.github.com
-      name: timm088
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    name: prometheus-consul-exporter
-    urls:
-    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-consul-exporter-0.4.0/prometheus-consul-exporter-0.4.0.tgz
-    version: 0.4.0
-generated: "2020-12-04T07:33:10.531026907Z"
+    - https://github.com/dieterdemeyer/helm-charts-1/releases/download/prometheus-adapter-2.8.1/prometheus-adapter-2.8.1.tgz
+    version: 2.8.1
+generated: "2020-12-07T19:02:00.802700352Z"
